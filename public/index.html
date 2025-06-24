@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lembra de Pagar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Lembra de Pagar</h1>
+
+  <div class="form">
+    <input type="text" id="nomeConta" placeholder="Nome da conta (ex: Luz)" />
+    <input type="number" id="valorConta" placeholder="Valor (R$)" />
+    <input type="date" id="vencimentoConta" />
+    <select id="statusConta">
+      <option value="nao">Não pago</option>
+      <option value="pago">Pago</option>
+    </select>
+    <button onclick="adicionarConta()">Adicionar Conta</button>
+  </div>
+
+  <div class="filtro">
+    <input type="month" id="filtroMes" />
+    <select id="filtroStatus">
+      <option value="todos">Todos</option>
+      <option value="pago">Pago</option>
+      <option value="nao">Não pago</option>
+    </select>
+    <button onclick="atualizarLista()">Filtrar</button>
+  </div>
+
+  <div class="lista-contas" id="listaContas">
+    <h2>Contas adicionadas</h2>
+    <div id="contas"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
